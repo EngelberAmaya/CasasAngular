@@ -5,30 +5,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { StudentService } from '../../services/student.service';
 import { MatDialog } from '@angular/material/dialog';
 import { AddStudentComponent } from '../add-student/add-student.component';
-
-export interface Student {
-  name: string;
-  species: string;
-  gender: string;
-  house: string;
-  dateOfBirth: Date;
-  yearOfBirth: number;
-  ancestry: string;
-  hairColour: string;
-  wand: Wand[];
-  patronus: string;
-  hogwartsStudent: boolean;
-  hogwartsStaff: boolean;
-  actor: string;
-  alive: boolean;
-  image: string;
-}
-
-export interface Wand {
-  wood: string;
-  core: string;
-  length: number;
-}
+import { Persona } from '../../interfaces/persona';
 
 @Component({
   selector: 'app-student',
@@ -38,8 +15,8 @@ export interface Wand {
 export class StudentComponent implements OnInit, AfterViewInit {
 
   displayedColumns: string[] = ['name', 'patronus', 'yearOfBirth', 'image'];
-  dataSource: MatTableDataSource<Student>;
-  student: Student[] = [];
+  dataSource: MatTableDataSource<Persona>;
+  student: Persona[] = [];
   anio: number = 0;
 
   spiner = true;

@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators, FormControl} from '@angular/forms';
+import { CasaEstudio } from '../../interfaces/casa';
 
-interface Casa {
-  value: string;
-  viewValue: string;
-}
 
 @Component({
   selector: 'app-character',
@@ -15,7 +12,7 @@ export class CharacterComponent implements OnInit {
 
   selectedValue: string = '';
 
-  casas: Casa[] = [
+  casas: CasaEstudio[] = [
     {value: '0', viewValue: 'Slytherin'},
     {value: '1', viewValue: 'Gryffindor'},
     {value: '2', viewValue: 'Ravenclaw '},

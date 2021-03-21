@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../../environments/environment';
+
+const apiUrl = environment.apiUrl;
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +14,7 @@ export class TeachersService {
   
   getAllTeacher(){
 
-  	return this.http.get('http://hp-api.herokuapp.com/api/characters/staff');
+  	return this.http.get(`${apiUrl}/staff`);
   	
   }
 }

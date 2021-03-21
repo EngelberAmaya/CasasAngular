@@ -3,30 +3,8 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { CharactersService } from '../../services/characters.service';
+import { Casa } from '../../interfaces/casa';
 
-export interface Casa {
-  name: string;
-  species: string;
-  gender: string;
-  house: string;
-  dateOfBirth: Date;
-  yearOfBirth: number;
-  ancestry: string;
-  hairColour: string;
-  wand: Wand[];
-  patronus: string;
-  hogwartsStudent: boolean;
-  hogwartsStaff: boolean;
-  actor: string;
-  alive: boolean;
-  image: string;
-}
-
-export interface Wand {
-  wood: string;
-  core: string;
-  length: number;
-}
 
 @Component({
   selector: 'app-ravenclaw',
